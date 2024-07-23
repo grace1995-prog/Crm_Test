@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from New_Customer_locator.New_Customer_Locator_Test import New_Customer_Locator_Test
 
 
-class NewCustomer_Page_Test:
+class New_Customer_Page_Test:
 
     def __int__(self, driver):
         self.driver = driver

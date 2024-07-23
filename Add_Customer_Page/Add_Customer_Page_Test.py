@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.support.wait import WebDriverWait
 
 from selenium.webdriver.support import expected_conditions as EC
@@ -13,3 +15,4 @@ class Add_Customer_Page_Test:
         add_user = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located(Add_Customer_Locator.Add_New))
         add_user.click()
+        time.sleep(5)
