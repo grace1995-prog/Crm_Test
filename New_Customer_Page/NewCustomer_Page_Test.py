@@ -9,9 +9,6 @@ class NewCustomer_Page_Test:
     def __int__(self, driver):
         self.driver = driver
 
-    def login_url(self, url):
-        self.driver.get(url)
-
     def email_field(self, email_field):
         enter_email_address = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located(New_Customer_Locator_Test.ENTER_EMAIL_ADDRESS_FIELD))
@@ -37,17 +34,17 @@ class NewCustomer_Page_Test:
             EC.presence_of_element_located(New_Customer_Locator_Test.SELECT_STATE))
         enter_state.send_keys(state_field)
 
-    def gender_field(self, gender_field):
+    def gender_field(self):
         enter_gender = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located(New_Customer_Locator_Test.SELECT_GENDER))
         enter_gender.click()
 
-    def promotion_field(self, promotion_field):
+    def promotion_field(self):
         enter_promotion = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located(New_Customer_Locator_Test.ADD_PROMOTION_LIST))
         enter_promotion.click()
 
-    def submit_field(self, submit_field):
+    def submit_field(self):
         submit_button_field = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located(New_Customer_Locator_Test.SUBMIT_BUTTON))
         submit_button_field.click()
